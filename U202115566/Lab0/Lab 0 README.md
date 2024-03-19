@@ -12,8 +12,8 @@ git version 2.41.0.windows.2
 
 ## 实验0-0：本地提交截图
 
-![[Snipaste_2024-03-19_19-29-40.png]]
+![](figure/Snipaste_2024-03-19_19-29-40.png)
 
 ## 实验0-1：提交后的仓库状态截图
 
-![[Snipaste_2024-03-19_19-31-58.png]]
+![](figure/Snipaste_2024-03-19_19-31-58.png)
