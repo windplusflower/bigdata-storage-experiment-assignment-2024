@@ -11,7 +11,8 @@
 
 - 首先git clone 自己的作业库
 - 创建对应的作业文件夹以及对应的README.md
-- 使用git commit -a -m "lab0 is done"
+- git add .\U202115396\
+- 提交git commit -a -m "lab0 is done"
 - 使用git push 推送到自己的作业仓库
 - 最后向总作业库发起Pull请求
 
