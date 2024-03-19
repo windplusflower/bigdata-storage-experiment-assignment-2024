@@ -21,7 +21,7 @@
 3. 将仓库抓取至本地
 
     * 选择一个工作目录用于存放本地仓库，开终端窗口进入目录   
-    * 使用命令 `git clone git@github.com:(用户名)/bigdata-storage-experiment-assignment-2023.git`
+    * 使用命令 `git clone git@github.com:(用户名)/bigdata-storage-experiment-assignment-2024.git`
 
 4. 在本地仓库中，用 :point_right: **_自己学号_** :exclamation: 建立文件夹
 
@@ -33,7 +33,3 @@
     * Pull请求即为向原始仓库要求合并，即**交作业**
     * 教师完成合并后作业将呈现于原始作业仓库中，完成提交
     * 后续如果有更新，还可以提交、推送后再次发起Pull请求
-
-6. 作业提交样式参考
-
-    * <https://github.com/cs-course/iot-storage-experiment-assignment-2019/tree/master/U201614890>
