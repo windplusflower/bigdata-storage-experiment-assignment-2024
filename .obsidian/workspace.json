@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "U202115566/Lab0/Lab 0 README.md",
+                "file": "U202115566/README.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "U202115566/Lab0/Lab 0 README.md",
+                "file": "U202115566/README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "U202115566/Lab0/Lab 0 README.md",
+                "file": "U202115566/README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "U202115566/Lab0/Lab 0 README.md"
+                "file": "U202115566/README.md"
               }
             }
           }
@@ -147,5 +147,7 @@
     }
   },
   "active": "0a618fb5f22ea2a9",
-  "lastOpenFiles": []
+  "lastOpenFiles": [
+    "U202115566/Lab0/Lab 0 README.md"
+  ]
 }
