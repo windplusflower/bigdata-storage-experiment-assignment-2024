@@ -19,4 +19,4 @@ windows10
     - 增删文件、文件夹、桶
     ![](figure/client_add_delete.png)
 # 实验小结
-    速度好快，以后需要跟同学传大文件就用minio了
+速度好快，以后需要跟同学传大文件就用minio了
