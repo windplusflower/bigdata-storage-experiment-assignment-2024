@@ -4,7 +4,7 @@ use super::single::SingleTask;
 use crate::{StdError, Task, TaskBuiler};
 use async_trait::async_trait;
 use reqwest::{Client, Url};
-use rusty_s3::{actions::PutObject, Bucket, Credentials, S3Action};
+use rusty_s3::{actions::PutObject, Bucket, Credentials, S3Action,UrlStyle};
 
 pub struct PutTask(pub SingleTask);
 
@@ -65,7 +65,7 @@ impl<const N: usize> TaskBuiler for PutTaskBuilder<N> {
     type I = Vec<PutTask>;
     fn spawn(&self, bucket: &str, object: &str) -> Self::T {
         let bucket =
-            Bucket::new(self.endpoint.clone(), true, bucket, self.region.as_str()).unwrap();
+            Bucket::new(self.endpoint.clone(), UrlStyle::Path, bucket.to_string(), self.region.clone()).unwrap();
         let credentials = Credentials::new(self.key.clone(), self.secret.clone());
         PutTask(SingleTask::new(bucket, credentials, object))
     }

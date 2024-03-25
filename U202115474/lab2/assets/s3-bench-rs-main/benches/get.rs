@@ -13,7 +13,7 @@ const OBJECT: &str = "wzy/minio.exe";
 #[tokio::main]
 async fn get() -> Result<String, Box<StdError>> {
     let get_task_builder = GetTaskBuilder::new(
-        ENDPOINT.parse::<Url>().unwrap(),
+        ENDPOINT.parse::<Url>().expect("endpoint is a valid Url"),
         KEY,
         SECRET,
         "minio",

@@ -5,7 +5,7 @@ use super::single::SingleTask;
 use crate::{StdError, Task, TaskBuiler};
 use async_trait::async_trait;
 use reqwest::{Client, Url};
-use rusty_s3::{actions::DeleteObject, Bucket, Credentials, S3Action};
+use rusty_s3::{actions::DeleteObject, Bucket, Credentials, S3Action,UrlStyle};
 
 pub struct DeleteTask(pub SingleTask);
 
@@ -65,7 +65,7 @@ impl<'a> TaskBuiler for DeleteTaskBuilder<'a> {
     type I = Vec<DeleteTask>;
     fn spawn(&self, bucket: &str, object: &str) -> Self::T {
         let bucket =
-            Bucket::new(self.endpoint.clone(), true, bucket.to_string(), self.region.to_string()).unwrap();
+            Bucket::new(self.endpoint.clone(), UrlStyle::Path, bucket.to_string(), self.region.to_string()).unwrap();
         let credentials = Credentials::new(self.key.to_string(), self.secret.to_string());
         DeleteTask(SingleTask::new(bucket, credentials, object))
     }
