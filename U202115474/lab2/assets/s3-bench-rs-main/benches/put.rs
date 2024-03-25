@@ -5,11 +5,11 @@ use criterion::{criterion_group, criterion_main, Criterion};
 use reqwest::Url;
 use s3_bench_rs::{PutTaskBuilder, StdError, Task, TaskBuiler};
 
-const ENDPOINT: &str = "http://172.25.42.79:9000";
-const KEY: &str = "ccc";
-const SECRET: &str = "WXZFwxzf123";
-const BUCKET: &str = "bucket0";
-const OBJECT: &str = "test.md";
+const ENDPOINT: &str = "http://127.0.0.1:9000";
+const KEY: &str = "admin";
+const SECRET: &str = "password";
+const BUCKET: &str = "myminio";
+const OBJECT: &str = "wzy/minio.exe";
 
 #[tokio::main]
 async fn put() -> Result<String, Box<StdError>> {
