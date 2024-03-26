@@ -4,8 +4,8 @@ LAB 0 - 准备
 
 # 实验环境
 
-Operating System : Microsoft Window 10 Home Single Language
-Processor	 ： Intel(R) Core(TM) i7-10750H CPU @ 2.60Ghz
+1. Operating System : Microsoft Window 10 Home Single Language
+2. Processor	    ： Intel(R) Core(TM) i7-10750H CPU @ 2.60Ghz
 
 # 实验记录
 
