@@ -14,23 +14,23 @@ windows11操作系统
 
 minio服务器创建成功
 
-![屏幕截图 2024-03-26 190801](C:\Users\15968\Desktop\storage\bigdata-storage-experiment-assignment-2024\U202115436\Lab1\figure\屏幕截图 2024-03-26 190801.png)
+![屏幕截图 2024-03-26 190801](.\figure\屏幕截图 2024-03-26 190801.png)
 
 添加本地客户端
 
-![屏幕截图 2024-03-26 192344](C:\Users\15968\Desktop\storage\bigdata-storage-experiment-assignment-2024\U202115436\Lab1\figure\屏幕截图 2024-03-26 192344.png)
+![屏幕截图 2024-03-26 192344](.\figure\屏幕截图 2024-03-26 192344.png)
 
 本地客户端添加成功
 
-![屏幕截图 2024-03-26 192608](C:\Users\15968\Desktop\storage\bigdata-storage-experiment-assignment-2024\U202115436\Lab1\figure\屏幕截图 2024-03-26 192608.png)
+![屏幕截图 2024-03-26 192608](.\figure\屏幕截图 2024-03-26 192608.png)
 
 文件上传
 
-![屏幕截图 2024-03-26 195657](C:\Users\15968\Desktop\storage\bigdata-storage-experiment-assignment-2024\U202115436\Lab1\figure\屏幕截图 2024-03-26 195657.png)
+![屏幕截图 2024-03-26 195657](.\figure\屏幕截图 2024-03-26 195657.png)
 
 文件下载
 
-![屏幕截图 2024-03-26 195944](C:\Users\15968\Desktop\storage\bigdata-storage-experiment-assignment-2024\U202115436\Lab1\figure\屏幕截图 2024-03-26 195944.png)
+![屏幕截图 2024-03-26 195944](.\figure\屏幕截图 2024-03-26 195944.png)
 
 
 
