@@ -10,6 +10,7 @@ LAB 1 - 搭建对象存储
 # 实验记录
 
 ## 实验LAB1
+
 1. 下载minio Server和minio Client
 2. 在exe存放处打开cmd，运行下列代码。其中，用真实路径代替filepath
 	minio.exe server filepath
@@ -17,9 +18,6 @@ LAB 1 - 搭建对象存储
 4. 使用运行结果的账号与密码（minioadmin,minioadmin)登入
 5. 访问正常，创建一个bucket（mytest）用于后续测试。
 
-
-……
-
 # 实验小结
 
-……
+初步了解了对象存储技术，实现了对象存储的服务器端。
