@@ -66,7 +66,7 @@ for bucket in response['Buckets']:
 print(bucket['Name'])
 ```
 3. 运行结果
-![](Snipaste_2024-04-02_19-54-27.png)
+![](figure/Snipaste_2024-04-02_19-54-27.png)
 # 实验小结
 
 使用S3Proxy+boto3搭建了对象存储系统，并进行了功能验证
