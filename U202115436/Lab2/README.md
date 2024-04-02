@@ -14,19 +14,19 @@ windows11操作系统
 
 minio服务器创建桶
 
-![image](.\figure\create.png)
+![image](./figure/create.png)
 
 读取桶
 
-![image](.\figure\read.png)
+![image](./figure/read.png)
 
 上传文件
 
-![image](.\figure\update.png)
+![image](./figure/update.png)
 
 删除桶
 
-![image](.\figure\delete.png)
+![image](./figure/delete.png)
 
 
 
