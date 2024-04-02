@@ -4,7 +4,8 @@ Lab 0
 # 实验环境
 
 # 实验记录
-## 实验X-1：
-
+	* git add .
+	* git commit -m 'lab0'
+	* git push origin master
 
 # 实验小结
