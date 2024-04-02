@@ -1,0 +1,158 @@
+{
+  "main": {
+    "id": "8d7cee46b38708cc",
+    "type": "split",
+    "children": [
+      {
+        "id": "8e6e0633d425a3a2",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1b7eb38508eb493b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "U202115566/Lab1/Lab 1 README.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "9e71662977bda2ee",
+    "type": "split",
+    "children": [
+      {
+        "id": "545fabc5e5c05d56",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "47437e48556a60f1",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "44ed318dbee8509f",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "4d8515a9237354f0",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "66a29ef0d5996540",
+    "type": "split",
+    "children": [
+      {
+        "id": "cce523274f5a1e0f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3cc42eae0121dd74",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "U202115566/Lab1/Lab 1 README.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "797e950f088e5e93",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "U202115566/Lab1/Lab 1 README.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "e73a417597ac4a27",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "cff1f653a35ab952",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "U202115566/Lab1/Lab 1 README.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "1b7eb38508eb493b",
+  "lastOpenFiles": [
+    "U202115566/Lab1/assets/client.py",
+    "U202115566/Lab1/assets",
+    "U202115566/Lab1/新建文件夹",
+    "U202115566/Lab1/figure/Snipaste_2024-04-02_19-54-27.png",
+    "U202115566/Lab2/Lab 2 README.md",
+    "U202115566/Lab1/Lab 1 README.md"
+  ]
+}
