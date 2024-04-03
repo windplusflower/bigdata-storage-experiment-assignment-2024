@@ -1,0 +1,1 @@
+this folder stroes all the figures for the records
