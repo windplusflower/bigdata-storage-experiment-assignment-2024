@@ -1,0 +1,15 @@
+[package]
+name = "rust_client"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = { version = "1" }
+tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
+aws-config = { version = "1", features = ["behavior-version-latest"] }
+aws-sdk-s3 = { version = "1", features = ["behavior-version-latest"] }
+rusoto_core = "0.48.0"
+rusoto_credential = "0.48.0"
+aws-credential-types = { version = "=1.1.5", features = ["hardcoded-credentials"] }
