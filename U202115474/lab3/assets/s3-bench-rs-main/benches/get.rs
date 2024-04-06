@@ -8,13 +8,8 @@ use s3_bench_rs::{GetTaskBuilder, StdError, Task, TaskBuiler};
 const ENDPOINT: &str = "http://127.0.0.1:12345/auth/v1.0";
 const KEY: &str = "chris:chris1234";
 const SECRET: &str = "testing";
-const BUCKET: &str = "my-container";
+const BUCKET: &str = "user_uploads";
 const OBJECT: &str = "test.txt";
-// const ENDPOINT: &str = "http://127.0.0.1:9000";
-// const KEY: &str = "admin";
-// const SECRET: &str = "password";
-// const BUCKET: &str = "my-container";
-// const OBJECT: &str = "test.txt";
 #[tokio::main]
 async fn get() -> Result<String, Box<StdError>> {
     let get_task_builder = GetTaskBuilder::new(
@@ -29,6 +24,8 @@ async fn get() -> Result<String, Box<StdError>> {
 }
 
 fn criterion_benchmark(c: &mut Criterion) {
+    let mut c = c.benchmark_group("Async GetObject");
+    c.measurement_time(std::time::Duration::new(10, 0));
     c.bench_function("Async GetObject", move |b| {
         b.to_async(FuturesExecutor).iter(|| async {
             let _ret = get();
