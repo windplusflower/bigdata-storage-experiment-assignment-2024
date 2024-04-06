@@ -11,7 +11,20 @@ Unbantu 22.04
     let bucket = Bucket::new(self.endpoint.clone(), UrlStyle::Path, bucket.to_string(), self.region.clone()).unwrap();
     ```
 
-服务端使用swift，运行结果如下：
+3. 基准测试默认的运行次数是100次，最大运行时间是5S，可能会出现在规定时间内无法完成一百次运行的情况，这个时候可以用`Criterion` 的`sample_size()`函数来减小运行次数，或者用`measurement_time`来增大最大运行时间。这里我选择的是后者，get.rs修改后的代码如下，put同理：
+    ```Rust
+    fn criterion_benchmark(c: &mut Criterion) {
+        let mut c = c.benchmark_group("Async GetObject");
+        c.measurement_time(std::time::Duration::new(10, 0));
+        c.bench_function("Async GetObject", move |b| {
+            b.to_async(FuturesExecutor).iter(|| async {
+                let _ret = get();
+            })
+        });
+    }
+    ```
+
+服务端使用openstack-swift，运行结果如下：
 ![](figure/run_bench.png)
 # 实验小结
-......
+在本次实验中我学会了使用基准测试对swift服务器的性能进行测试并查看尾延迟。
