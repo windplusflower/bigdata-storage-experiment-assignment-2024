@@ -11,7 +11,7 @@ Unbantu 22.04
     let bucket = Bucket::new(self.endpoint.clone(), UrlStyle::Path, bucket.to_string(), self.region.clone()).unwrap();
     ```
 
-服务端使用minio，运行结果如下：
+服务端使用swift，运行结果如下：
 ![](figure/run_bench.png)
 # 实验小结
 ......
