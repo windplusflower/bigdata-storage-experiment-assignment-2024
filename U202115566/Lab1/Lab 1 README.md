@@ -1,15 +1,27 @@
 # 实验名称
 
-Lab 1 搭建对象存储
+---
+
+## Lab 1 搭建对象存储
 
 # 实验环境
 
-处理器	11th Gen Intel(R) Core(TM) i5-11400H @ 2.70GHz   2.69 GHz  
-系统类型	64 位操作系统, 基于 x64 的处理器  
-git version 2.41.0.windows.2  
-服务器 s3proxy
-客户端 boto3
+---
+
+|   环境：   |            环境情况：            |
+| :--------: | :------------------------------: |
+| 操作系统： |            Windows 11            |
+| 系统类型： | 64 位操作系统, 基于 x64 的处理器 |
+| Git版本：  |   git version 2.41.0.windows.2   |
+|  服务器：  |             S3proxy              |
+|  客户端：  |              boto3               |
+
+
+
 # 实验记录
+
+---
+
 ## 实验1-1：服务端
 
 > 使用**S3Proxy**模拟AWS S3服务
@@ -34,6 +46,8 @@ java -jar s3proxy --properties s3proxy.conf
 5. 在浏览器中查看详情
 ![](figure/Snipaste_2024-04-02_18-57-05.png)
 ## 实验1-2：客户端
+
+---
 
 >使用boto3编程api
 
@@ -69,4 +83,6 @@ print(bucket['Name'])
 ![](figure/Snipaste_2024-04-02_19-54-27.png)
 # 实验小结
 
-使用S3Proxy+boto3搭建了对象存储系统，并进行了功能验证
+---
+
+> 使用S3Proxy+boto3搭建了对象存储系统，并进行了功能验证
