@@ -13,11 +13,12 @@
     4. 计算平均延迟和吞吐量
     5. 画图分析
 
-并发数对延迟的影响如下图所示
+并发数对延迟的影响如下图所示<br>
 ![Put-Latency](./figure/put%20lantency.png)
 ![Get-Latency](./figure/Get%20lantency.png)
 
-并发数对吞吐量的影响如下图所示
+
+并发数对吞吐量的影响如下图所示<br>
 ![Put-Throughput](./figure/Put%20Throughput.png)
 ![Get-Throughput](./figure/Get%20throughput.png)
 
