@@ -4,20 +4,28 @@
 
 使用 Python 脚本对 Swift 存储系统进行测试，测试其是否可以完成写入、读取、更新和删除对象的相关操作。
 
-并且，简单的评估其在不同工作负载下的性能表现，包括写入、读取、更新和删除对象的吞吐量和延迟。
-
 # **实验环境**
 
 - 服务器端：Ubuntu 22.04 LTS + Docker
-- 客户端：Ubuntu 22.04 LTS
+- 客户端：Ubuntu 22.04 LTS + Python3.10
 
 # **实验步骤**
 
 ## 准备环境
 
 部署 Swift 存储系统并确保可通过 HTTP 协议访问。
+
+![截图](figure/2.png)
+
 安装必要的 Python 模块，包括 swiftclient、matplotlib 和 tqdm。
 配置 Swift 存储的端点、凭据、容器名称等参数。
+
+```python
+# Swift 存储的端点和凭据
+endpoint = 'http://127.0.0.1:12345/'
+_user_ = 'test:tester'
+_key_ = 'testing'
+```
 
 ## 编写测试脚本
 
@@ -92,14 +100,10 @@
 
 # **实验结果**
 
-读取存储了测试结果的文件，解析各项性能指标，如吞吐量和平均延迟。保存在result.txt文件中。![截图](figure/1.png)
-
-将各项性能指标整理并绘制成图表，以直观展示 Swift 存储在不同工作负载下的性能表现。![截图](figure/read_throughputs.png)![截图](figure/write_throughputs.png)![截图](figure/update_throughput.png)
-
-可以发现，读取操作的总吞吐量高于写入、更新和删除操作的总吞吐量，应该是读取操作通常比写入、更新和删除操作更快速，因为读取操作通常不会对数据进行修改，因此响应时间较快。
+读取存储了测试结果的文件，解析各项性能指标，我这里记录的是不同client下的CURD四项基本操作的吞吐量和平均延迟。保存在result.txt文件中。![截图](figure/1.png)
 
 # **实验心得**
 
-python-swiftclient 库提供了方便的操作 Swift 的接口，可以轻松地将文件上传到服务端并下载到客户端。
+python-swiftclient 库提供了方便的操作 Swift 的接口，可以轻松地将文件上传到服务端并下载到客户端，同时文件的读取和修改也十分便捷。
 
 ###
