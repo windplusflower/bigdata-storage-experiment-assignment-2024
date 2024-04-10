@@ -98,10 +98,10 @@ def bench_update(i):
 # 字典，将操作类型映射到相应的函数
 switch = {'write': bench_put, 'read': bench_get, 'delete': bench_delete, 'update': bench_update}
 
-# 运行特定操作类型测试的函数
+# 运行CRUD测试
 def run_test(test_type):
     """
-    运行指定操作类型的测试。
+    运行CRUD测试。
 
     Args:
         test_type (str): 操作类型（'write'、'read'、'update' 或 'delete'）。
@@ -146,7 +146,8 @@ object_name_prefix = 'testObj'
 total_size = 4 * 1024 # 总大小（KB）
 object_size = 8 # 对象大小（KB）
 num_samples = 1024 # 样本数
-num_clients = list(range(1, 20, 2)) + list(range(20, 200, 20)) # 客户端数
+# num_clients = list(range(10000, 100000, 10000))
+num_clients = list(range(1, 20, 2)) + list(range(20, 200, 20)) # + list(range(200,10000, 2000))# 客户端数
 result_file = "result.txt" # 存储结果的文件
 
 print('端点：', endpoint)
@@ -198,3 +199,58 @@ for num_client in num_clients:
     # 删除容器
     conn.delete_container(bucket_name)
     print('已删除测试容器 %s。' % bucket_name)
+
+# 处理结果文件并绘图
+write_throughputs = []
+write_latencies = []
+read_throughputs = []
+read_latencies = []
+update_throughputs = []
+update_latencies = []
+
+# Parse the result file
+with open(result_file, 'r') as file:
+    lines = file.readlines()
+    for line in lines:
+        if line.startswith('write_total_throughput'):
+            write_throughputs.append(float(line.split(':')[1].strip().split()[0]))
+        elif line.startswith('write_average_latency'):
+            write_latencies.append(float(line.split(':')[1].strip().split()[0]))
+        elif line.startswith('read_total_throughput'):
+            read_throughputs.append(float(line.split(':')[1].strip().split()[0]))
+        elif line.startswith('read_average_latency'):
+            read_latencies.append(float(line.split(':')[1].strip().split()[0]))
+        elif line.startswith('update_total_throughput'):
+            update_throughputs.append(float(line.split(':')[1].strip().split()[0]))
+        elif line.startswith('update_average_latency'):
+            update_latencies.append(float(line.split(':')[1].strip().split()[0]))
+
+    # Plotting
+
+    # Latency plot
+    plt.figure(figsize=(10, 6))
+    plt.plot(num_clients, write_latencies, marker='o', color='blue', label='Write Latency')
+    plt.plot(num_clients, read_latencies, marker='o', color='orange', label='Read Latency')
+    plt.plot(num_clients, update_latencies, marker='o', color='green', label='Update Latency')
+    plt.xlabel('Number of Clients')
+    plt.ylabel('Latency (s)')
+    plt.title('Latency Comparison')
+    plt.grid(True)
+    plt.legend()
+    plt.tight_layout()
+    plt.savefig('combined_latencies.png')
+    plt.show()
+
+    # throughput plot
+    plt.figure(figsize=(10, 6))
+    plt.plot(num_clients, write_throughputs, marker='o',color='blue', label='Write Throughput')
+    plt.plot(num_clients, read_throughputs, marker='o', color='orange', label='Read Throughput')
+    plt.plot(num_clients, update_throughputs, marker='o', color='green', label='Update Throughput')
+    plt.xlabel('Number of Clients')
+    plt.ylabel('Throughput (KB/s)')
+    plt.title('Throughput Comparison')
+    plt.grid(True)
+    plt.legend()
+    plt.tight_layout()
+    plt.savefig('combined_throughputs.png')
+    plt.show()

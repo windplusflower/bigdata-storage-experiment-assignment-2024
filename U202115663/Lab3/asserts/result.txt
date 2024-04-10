@@ -1,0 +1,72 @@
+num_client: 1 
+write_total_throughput: 586.4997211288662 KB/s
+write_average_latency: 0.01358786947093904 秒
+num_client: 1 
+read_total_throughput: 1159.2276545781626 KB/s
+read_average_latency: 0.006845573429018259 秒
+num_client: 1 
+update_total_throughput: 617.7474395872654 KB/s
+update_average_latency: 0.012904222588986158 秒
+num_client: 1 
+delete_total_throughput: 689.800336374581 KB/s
+delete_average_latency: 0.011552532203495502 秒
+num_client: 3 
+write_total_throughput: 617.2761563825359 KB/s
+write_average_latency: 0.012915822677314281 秒
+num_client: 3 
+read_total_throughput: 1126.543627930888 KB/s
+read_average_latency: 0.0070502248127013445 秒
+num_client: 3 
+update_total_throughput: 622.3598905341039 KB/s
+update_average_latency: 0.01280915318056941 秒
+num_client: 3 
+delete_total_throughput: 662.7809526028731 KB/s
+delete_average_latency: 0.01202490390278399 秒
+num_client: 5 
+write_total_throughput: 601.6395216439103 KB/s
+write_average_latency: 0.013249746058136225 秒
+num_client: 5 
+read_total_throughput: 1098.7673842808617 KB/s
+read_average_latency: 0.0072284420020878315 秒
+num_client: 5 
+update_total_throughput: 614.5643261651502 KB/s
+update_average_latency: 0.012972455937415361 秒
+num_client: 5 
+delete_total_throughput: 666.393520200731 KB/s
+delete_average_latency: 0.01195865636691451 秒
+num_client: 7 
+write_total_throughput: 597.304470397332 KB/s
+write_average_latency: 0.013345777988433838 秒
+num_client: 7 
+read_total_throughput: 1101.4130367522146 KB/s
+read_average_latency: 0.00721093057654798 秒
+num_client: 7 
+update_total_throughput: 594.4270134603797 KB/s
+update_average_latency: 0.013409964041784406 秒
+num_client: 7 
+delete_total_throughput: 684.5261285572968 KB/s
+delete_average_latency: 0.011642408324405551 秒
+num_client: 9 
+write_total_throughput: 610.1110873725504 KB/s
+write_average_latency: 0.013065969571471214 秒
+num_client: 9 
+read_total_throughput: 1126.764472753834 KB/s
+read_average_latency: 0.007048919331282377 秒
+num_client: 9 
+update_total_throughput: 605.8723615058427 KB/s
+update_average_latency: 0.013157627312466502 秒
+num_client: 9 
+delete_total_throughput: 676.4828641510277 KB/s
+delete_average_latency: 0.01178015791811049 秒
+num_client: 11 
+write_total_throughput: 597.0487628520243 KB/s
+write_average_latency: 0.013352840906009078 秒
+num_client: 11 
+read_total_throughput: 1120.9781257200896 KB/s
+read_average_latency: 0.0070851449854671955 秒
+num_client: 11 
+update_total_throughput: 618.8813671575349 KB/s
+update_average_latency: 0.012879946269094944 秒
+num_client: 11 
+delete_total_throughput: 690.6847282232392 KB/s
+delete_average_latency: 0.011539000552147627 秒
