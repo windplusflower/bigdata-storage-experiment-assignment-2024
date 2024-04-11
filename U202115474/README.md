@@ -5,3 +5,6 @@
 # 课程报告简介
 ......
 # 实验内容简介
+openstack-swift
+python api
+s3-bench-rs

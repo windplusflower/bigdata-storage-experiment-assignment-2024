@@ -8,4 +8,4 @@ Ubuntu 22.04
 ## 实验2:运行openstack-swift并用python api进行CRUD
 ![](./figure/crud_py.png)
 # 实验小结
-原本想尝试用rust进行CRUD，可惜并没有找到合适的api。
+成功运行openstack-swift服务器，并通过swift客户端以及python的编程api两种方法对服务器进行增删查改的操作。
