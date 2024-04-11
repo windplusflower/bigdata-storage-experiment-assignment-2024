@@ -29,21 +29,20 @@ impl Task for PutTask {
     }
 }
 
-pub struct PutTaskBuilder<const N: usize> {
+pub struct PutTaskBuilder {
     endpoint: Url,
     key: String,
     secret: String,
     region: String,
-    tasks: [(String, String); N],
+        pool: Vec<(String,String)>
 }
 
-impl<const N: usize> PutTaskBuilder<N> {
+impl PutTaskBuilder {
     pub fn new<U, S>(
         endpoint: U,
         key: S,
         secret: S,
         region: S,
-        tasks: [(String, String); N],
     ) -> Self
     where
         U: Into<Url>,
@@ -54,12 +53,16 @@ impl<const N: usize> PutTaskBuilder<N> {
             key: key.into(),
             secret: secret.into(),
             region: region.into(),
-            tasks,
+            pool:Vec::new()
         }
+    }
+    
+    pub fn append_task<S: Into<String>>(&mut self, bucket: S, object: S) {
+        self.pool.push((bucket.into(), object.into()));
     }
 }
 
-impl<const N: usize> TaskBuiler for PutTaskBuilder<N> {
+impl TaskBuiler for PutTaskBuilder {
     type R = String;
     type T = PutTask;
     type I = Vec<PutTask>;
@@ -71,7 +74,7 @@ impl<const N: usize> TaskBuiler for PutTaskBuilder<N> {
     }
 
     fn spawn_tier(&self) -> Self::I {
-        self.tasks
+        self.pool
             .iter()
             .map(|(bucket, object)| self.spawn(bucket.as_str(), object.as_str()))
             .collect()
