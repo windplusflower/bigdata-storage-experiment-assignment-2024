@@ -13,16 +13,11 @@ const OBJECT: &str = "test.txt";
 
 #[tokio::main]
 async fn put() -> Result<String, Box<StdError>> {
-    let tasks: [(String, String); 2] = [
-        ("bucket1".into(), "test0.txt".into()),
-        ("bucket1".into(), "test1.txt".into()),
-    ];
     let put_task_builder = PutTaskBuilder::new(
         ENDPOINT.parse::<Url>().unwrap(),
         KEY,
         SECRET,
         "minio",
-        tasks,
     );
     let task = put_task_builder.spawn(BUCKET, OBJECT);
     let resp = task.run().await?;
