@@ -1,0 +1,2 @@
+/usr/bin/ar qc libLIB.a CMakeFiles/LIB.dir/cuckoo.cpp.o CMakeFiles/LIB.dir/hash.cpp.o
+/usr/bin/ranlib libLIB.a
