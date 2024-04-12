@@ -1,0 +1,160 @@
+C:\Users\86137\PycharmProjects\pythonProject2\venv\Scripts\python.exe C:\Users\86137\PycharmProjects\pythonProject2\ceshi.py 
+=====TEST=====
+object_size: 1 KB
+Test file _test_1.bin created.
+-----create-----
+总时间: 58.462066411972046 s
+吞吐率: 70.06252517891171 KB/s
+-----read-----
+总时间: 36.98398303985596 s
+吞吐率: 110.75064563992275 KB/s
+-----delete-----
+总时间: 45.32400918006897 s
+吞吐率: 90.37152877908245 KB/s
+Downloaded files deleted.
+Test file _test_1.bin deleted.
+=====TEST=====
+object_size: 2 KB
+Test file _test_2.bin created.
+-----create-----
+总时间: 29.102921724319458 s
+吞吐率: 140.74188285285575 KB/s
+-----read-----
+总时间: 20.205638885498047 s
+吞吐率: 202.71568858630712 KB/s
+-----delete-----
+总时间: 27.50974202156067 s
+吞吐率: 148.89270850994436 KB/s
+Downloaded files deleted.
+Test file _test_2.bin deleted.
+=====TEST=====
+object_size: 4 KB
+Test file _test_4.bin created.
+-----create-----
+总时间: 16.264594316482544 s
+吞吐率: 251.83536215527445 KB/s
+-----read-----
+总时间: 9.208394765853882 s
+吞吐率: 444.81151212028686 KB/s
+-----delete-----
+总时间: 13.044910192489624 s
+吞吐率: 313.9921961561835 KB/s
+Downloaded files deleted.
+Test file _test_4.bin deleted.
+=====TEST=====
+object_size: 8 KB
+Test file _test_8.bin created.
+-----create-----
+总时间: 7.909120798110962 s
+吞吐率: 517.883100353999 KB/s
+-----read-----
+总时间: 4.664889097213745 s
+吞吐率: 878.0487412758574 KB/s
+-----delete-----
+总时间: 7.695628881454468 s
+吞吐率: 532.2501985342436 KB/s
+Downloaded files deleted.
+Test file _test_8.bin deleted.
+=====TEST=====
+object_size: 16 KB
+Test file _test_16.bin created.
+-----create-----
+总时间: 4.277932405471802 s
+吞吐率: 957.4718840253071 KB/s
+-----read-----
+总时间: 2.3256406784057617 s
+吞吐率: 1761.235103097624 KB/s
+-----delete-----
+总时间: 3.2051286697387695 s
+吞吐率: 1277.9518147500269 KB/s
+Downloaded files deleted.
+Test file _test_16.bin deleted.
+=====TEST=====
+object_size: 32 KB
+Test file _test_32.bin created.
+-----create-----
+总时间: 2.1959524154663086 s
+吞吐率: 1865.2498893653021 KB/s
+-----read-----
+总时间: 0.9818785190582275 s
+吞吐率: 4171.595488135023 KB/s
+-----delete-----
+总时间: 1.8838989734649658 s
+吞吐率: 2174.2142533611673 KB/s
+Downloaded files deleted.
+Test file _test_32.bin deleted.
+=====TEST=====
+object_size: 64 KB
+Test file _test_64.bin created.
+-----create-----
+总时间: 0.9236931800842285 s
+吞吐率: 4434.372893850423 KB/s
+-----read-----
+总时间: 0.5126378536224365 s
+吞吐率: 7990.045937998074 KB/s
+-----delete-----
+总时间: 0.8796830177307129 s
+吞吐率: 4656.222659119084 KB/s
+Downloaded files deleted.
+Test file _test_64.bin deleted.
+=====TEST=====
+object_size: 128 KB
+Test file _test_128.bin created.
+-----create-----
+总时间: 0.6300356388092041 s
+吞吐率: 6501.219530599294 KB/s
+-----read-----
+总时间: 0.3140830993652344 s
+吞吐率: 13041.13468148418 KB/s
+-----delete-----
+总时间: 0.4905407428741455 s
+吞吐率: 8349.96900767299 KB/s
+Downloaded files deleted.
+Test file _test_128.bin deleted.
+=====TEST=====
+object_size: 256 KB
+Test file _test_256.bin created.
+-----create-----
+总时间: 0.30321264266967773 s
+吞吐率: 13508.671551213038 KB/s
+-----read-----
+总时间: 0.16543078422546387 s
+吞吐率: 24759.599727325265 KB/s
+-----delete-----
+总时间: 0.2203214168548584 s
+吞吐率: 18591.020602860095 KB/s
+Downloaded files deleted.
+Test file _test_256.bin deleted.
+=====TEST=====
+object_size: 512 KB
+Test file _test_512.bin created.
+-----create-----
+总时间: 0.14213919639587402 s
+吞吐率: 28816.82255042563 KB/s
+-----read-----
+总时间: 0.10509657859802246 s
+吞吐率: 38973.67597157032 KB/s
+-----delete-----
+总时间: 0.1212775707244873 s
+吞吐率: 33773.76357005947 KB/s
+Downloaded files deleted.
+Test file _test_512.bin deleted.
+=====TEST=====
+object_size: 1024 KB
+Test file _test_1024.bin created.
+-----create-----
+总时间: 0.10014057159423828 s
+吞吐率: 40902.50269987143 KB/s
+-----read-----
+总时间: 0.10547661781311035 s
+吞吐率: 38833.25124491129 KB/s
+-----delete-----
+总时间: 0.0699160099029541 s
+吞吐率: 58584.57892098524 KB/s
+Downloaded files deleted.
+Test file _test_1024.bin deleted.
+[70.06252517891171, 140.74188285285575, 251.83536215527445, 517.883100353999, 957.4718840253071, 1865.2498893653021, 4434.372893850423, 6501.219530599294, 13508.671551213038, 28816.82255042563, 40902.50269987143]
+[110.75064563992275, 202.71568858630712, 444.81151212028686, 878.0487412758574, 1761.235103097624, 4171.595488135023, 7990.045937998074, 13041.13468148418, 24759.599727325265, 38973.67597157032, 38833.25124491129]
+[90.37152877908245, 148.89270850994436, 313.9921961561835, 532.2501985342436, 1277.9518147500269, 2174.2142533611673, 4656.222659119084, 8349.96900767299, 18591.020602860095, 33773.76357005947, 58584.57892098524]
+
+进程已结束,退出代码0
