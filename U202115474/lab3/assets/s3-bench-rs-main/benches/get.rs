@@ -11,7 +11,7 @@ const SECRET: &str = "testing";
 const BUCKET: &str = "user_uploads";
 const OBJECT: &str = "test.txt";
 //#[tokio::main]
-async fn get()  {
+async fn get() {
     let get_task_builder = GetTaskBuilder::new(
         ENDPOINT.parse::<Url>().expect("endpoint is a valid Url"),
         KEY,
@@ -21,14 +21,14 @@ async fn get()  {
     let task = get_task_builder.spawn(BUCKET, OBJECT);
     let _ = task.run().await;
 }
-use tokio::task;
 use std::thread;
+use tokio::task;
 #[tokio::main]
-async fn getn(n:usize){
+async fn getn(n: usize) {
     let mut handles = vec![];
     for _ in 0..n {
         let handle = thread::spawn(move || async {
-            let task=task::spawn(get());
+            let task = task::spawn(get());
             task
         });
         handles.push(handle);
@@ -36,23 +36,20 @@ async fn getn(n:usize){
 
     // 等待所有线程完成
     for handle in handles {
-        let _=handle.join().unwrap().await;
+        let _ = handle.join().unwrap().await;
     }
 }
 fn criterion_benchmark(c: &mut Criterion) {
     let mut c = c.benchmark_group("Async GetObject");
     c.measurement_time(std::time::Duration::new(10, 0));
     c.sample_size(10);
-    c.bench_function("Async GetObject1", move |b| {
-        b.to_async(FuturesExecutor).iter(|| async {
-            getn(1);
-        })
-    });
-    c.bench_function("Async GetObject2", move |b| {
-        b.to_async(FuturesExecutor).iter(|| async {
-            getn(2);
-        })
-    });
+    for i in 1..=10 {
+        c.bench_function(format!("Async GetObject withConcurrency:{}", i), move |b| {
+            b.to_async(FuturesExecutor).iter(|| async {
+                getn(i);
+            })
+        });
+    }
 }
 
 criterion_group!(benches, criterion_benchmark);
