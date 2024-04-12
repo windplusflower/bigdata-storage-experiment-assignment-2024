@@ -5,13 +5,14 @@ use super::single::SingleTask;
 use crate::{StdError, Task, TaskBuiler};
 use async_trait::async_trait;
 use reqwest::{Client, Url};
-use rusty_s3::{actions::DeleteObject, Bucket, Credentials, S3Action,UrlStyle};
+use rusty_s3::{actions::DeleteObject, Bucket, Credentials, S3Action, UrlStyle};
 
 pub struct DeleteTask(pub SingleTask);
 
 impl DeleteTask {
     pub fn signed_url(&self) -> Url {
-        let mut action = DeleteObject::new(&self.0.bucket, Some(&self.0.credentials), &self.0.object);
+        let mut action =
+            DeleteObject::new(&self.0.bucket, Some(&self.0.credentials), &self.0.object);
         action
             .query_mut()
             .insert("response-cache-control", "no-cache, no-store");
@@ -64,8 +65,13 @@ impl<'a> TaskBuiler for DeleteTaskBuilder<'a> {
     type T = DeleteTask;
     type I = Vec<DeleteTask>;
     fn spawn(&self, bucket: &str, object: &str) -> Self::T {
-        let bucket =
-            Bucket::new(self.endpoint.clone(), UrlStyle::Path, bucket.to_string(), self.region.to_string()).unwrap();
+        let bucket = Bucket::new(
+            self.endpoint.clone(),
+            UrlStyle::Path,
+            bucket.to_string(),
+            self.region.to_string(),
+        )
+        .unwrap();
         let credentials = Credentials::new(self.key.to_string(), self.secret.to_string());
         DeleteTask(SingleTask::new(bucket, credentials, object))
     }

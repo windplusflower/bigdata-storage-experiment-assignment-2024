@@ -1,5 +1,5 @@
 # 实验名称
-
+性能分析
 # 实验环境
 Unbantu 22.04
 # 试验记录
@@ -26,5 +26,32 @@ Unbantu 22.04
 
 服务端使用openstack-swift，运行结果如下：
 ![](figure/run_bench.png)
+
+## 实验2 修改s3-bench-rs
+修改put.rs和get.rs两个文件，编写函数实现n个请求并行执行，研究并发数对响应时间的影响。
+
+以get为例，函数如下：
+```rust
+#[tokio::main]
+async fn getn(n:usize){
+    let mut handles = vec![];
+    for _ in 0..n {
+        let handle = thread::spawn(move || async {
+            task::spawn(get())
+        });
+        handles.push(handle);
+    }
+    // 等待所有线程完成
+    for handle in handles {
+        let _=handle.join().unwrap().await;
+    }
+}
+```
+
+之后运行s3-bench-rs测试并发数从1到10变化时get和put的延时，运行结果保存在./asserts/s3-bench-rs-main/out.txt中，对结果绘制图表，得到下表：
+![](./figure/image.png)
+
+可以发现，并发数与延时近似成线性关系增长。
+
 # 实验小结
 在本次实验中我学会了使用基准测试对swift服务器的性能进行测试并查看尾延迟。

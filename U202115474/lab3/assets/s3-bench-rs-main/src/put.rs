@@ -4,7 +4,7 @@ use super::single::SingleTask;
 use crate::{StdError, Task, TaskBuiler};
 use async_trait::async_trait;
 use reqwest::{Client, Url};
-use rusty_s3::{actions::PutObject, Bucket, Credentials, S3Action,UrlStyle};
+use rusty_s3::{actions::PutObject, Bucket, Credentials, S3Action, UrlStyle};
 
 pub struct PutTask(pub SingleTask);
 
@@ -29,22 +29,16 @@ impl Task for PutTask {
     }
 }
 
-pub struct PutTaskBuilder<const N: usize> {
+pub struct PutTaskBuilder {
     endpoint: Url,
     key: String,
     secret: String,
     region: String,
-    tasks: [(String, String); N],
+    pool: Vec<(String, String)>,
 }
 
-impl<const N: usize> PutTaskBuilder<N> {
-    pub fn new<U, S>(
-        endpoint: U,
-        key: S,
-        secret: S,
-        region: S,
-        tasks: [(String, String); N],
-    ) -> Self
+impl PutTaskBuilder {
+    pub fn new<U, S>(endpoint: U, key: S, secret: S, region: S) -> Self
     where
         U: Into<Url>,
         S: Into<String>,
@@ -54,24 +48,33 @@ impl<const N: usize> PutTaskBuilder<N> {
             key: key.into(),
             secret: secret.into(),
             region: region.into(),
-            tasks,
+            pool: Vec::new(),
         }
+    }
+
+    pub fn append_task<S: Into<String>>(&mut self, bucket: S, object: S) {
+        self.pool.push((bucket.into(), object.into()));
     }
 }
 
-impl<const N: usize> TaskBuiler for PutTaskBuilder<N> {
+impl TaskBuiler for PutTaskBuilder {
     type R = String;
     type T = PutTask;
     type I = Vec<PutTask>;
     fn spawn(&self, bucket: &str, object: &str) -> Self::T {
-        let bucket =
-            Bucket::new(self.endpoint.clone(), UrlStyle::Path, bucket.to_string(), self.region.clone()).unwrap();
+        let bucket = Bucket::new(
+            self.endpoint.clone(),
+            UrlStyle::Path,
+            bucket.to_string(),
+            self.region.clone(),
+        )
+        .unwrap();
         let credentials = Credentials::new(self.key.clone(), self.secret.clone());
         PutTask(SingleTask::new(bucket, credentials, object))
     }
 
     fn spawn_tier(&self) -> Self::I {
-        self.tasks
+        self.pool
             .iter()
             .map(|(bucket, object)| self.spawn(bucket.as_str(), object.as_str()))
             .collect()
