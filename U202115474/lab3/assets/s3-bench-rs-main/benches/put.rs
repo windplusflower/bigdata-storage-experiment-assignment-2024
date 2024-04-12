@@ -11,25 +11,21 @@ const SECRET: &str = "testing";
 const BUCKET: &str = "user_uploads";
 const OBJECT: &str = "test.txt";
 
-async fn put()  {
-    let put_task_builder = PutTaskBuilder::new(
-        ENDPOINT.parse::<Url>().unwrap(),
-        KEY,
-        SECRET,
-        "minio",
-    );
+async fn put() {
+    let put_task_builder =
+        PutTaskBuilder::new(ENDPOINT.parse::<Url>().unwrap(), KEY, SECRET, "minio");
     let task = put_task_builder.spawn(BUCKET, OBJECT);
     let _ = task.run().await;
 }
 
-use tokio::task;
 use std::thread;
+use tokio::task;
 #[tokio::main]
-async fn putn(n:usize){
+async fn putn(n: usize) {
     let mut handles = vec![];
     for _ in 0..n {
         let handle = thread::spawn(move || async {
-            let task=task::spawn(put());
+            let task = task::spawn(put());
             task
         });
         handles.push(handle);
@@ -37,23 +33,20 @@ async fn putn(n:usize){
 
     // 等待所有线程完成
     for handle in handles {
-        let _=handle.join().unwrap().await;
+        let _ = handle.join().unwrap().await;
     }
 }
 fn criterion_benchmark(c: &mut Criterion) {
     let mut c = c.benchmark_group("Async GetObject");
     c.measurement_time(std::time::Duration::new(10, 0));
-    c.sample_size(50);
-    c.bench_function("Async PutObject1", move |b| {
-        b.to_async(FuturesExecutor).iter(|| async {
-            putn(1);
-        })
-    });
-    c.bench_function("Async PutObject2", move |b| {
-        b.to_async(FuturesExecutor).iter(|| async {
-            putn(2);
-        })
-    });
+    c.sample_size(10);
+    for i in 1..=10 {
+        c.bench_function(format!("Async PutObject withConcurrency:{}", i), move |b| {
+            b.to_async(FuturesExecutor).iter(|| async {
+                putn(i);
+            })
+        });
+    }
 }
 
 criterion_group!(benches, criterion_benchmark);

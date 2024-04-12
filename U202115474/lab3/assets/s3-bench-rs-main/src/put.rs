@@ -4,7 +4,7 @@ use super::single::SingleTask;
 use crate::{StdError, Task, TaskBuiler};
 use async_trait::async_trait;
 use reqwest::{Client, Url};
-use rusty_s3::{actions::PutObject, Bucket, Credentials, S3Action,UrlStyle};
+use rusty_s3::{actions::PutObject, Bucket, Credentials, S3Action, UrlStyle};
 
 pub struct PutTask(pub SingleTask);
 
@@ -34,16 +34,11 @@ pub struct PutTaskBuilder {
     key: String,
     secret: String,
     region: String,
-        pool: Vec<(String,String)>
+    pool: Vec<(String, String)>,
 }
 
 impl PutTaskBuilder {
-    pub fn new<U, S>(
-        endpoint: U,
-        key: S,
-        secret: S,
-        region: S,
-    ) -> Self
+    pub fn new<U, S>(endpoint: U, key: S, secret: S, region: S) -> Self
     where
         U: Into<Url>,
         S: Into<String>,
@@ -53,10 +48,10 @@ impl PutTaskBuilder {
             key: key.into(),
             secret: secret.into(),
             region: region.into(),
-            pool:Vec::new()
+            pool: Vec::new(),
         }
     }
-    
+
     pub fn append_task<S: Into<String>>(&mut self, bucket: S, object: S) {
         self.pool.push((bucket.into(), object.into()));
     }
@@ -67,8 +62,13 @@ impl TaskBuiler for PutTaskBuilder {
     type T = PutTask;
     type I = Vec<PutTask>;
     fn spawn(&self, bucket: &str, object: &str) -> Self::T {
-        let bucket =
-            Bucket::new(self.endpoint.clone(), UrlStyle::Path, bucket.to_string(), self.region.clone()).unwrap();
+        let bucket = Bucket::new(
+            self.endpoint.clone(),
+            UrlStyle::Path,
+            bucket.to_string(),
+            self.region.clone(),
+        )
+        .unwrap();
         let credentials = Credentials::new(self.key.clone(), self.secret.clone());
         PutTask(SingleTask::new(bucket, credentials, object))
     }

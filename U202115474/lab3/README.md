@@ -48,8 +48,10 @@ async fn getn(n:usize){
 }
 ```
 
-之后运行s3-bench-rs，结果如下：
-![](./figure/run_bench2.png)
+之后运行s3-bench-rs测试并发数从1到10变化时get和put的延时，运行结果保存在./asserts/s3-bench-rs-main/out.txt中，对结果绘制图表，得到下表：
+![](./figure/image.png)
+
+可以发现，并发数与延时近似成线性关系增长。
 
 # 实验小结
 在本次实验中我学会了使用基准测试对swift服务器的性能进行测试并查看尾延迟。

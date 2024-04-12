@@ -1,0 +1,160 @@
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+Benchmarking Async GetObject/Async GetObject withConcurrency:1
+Benchmarking Async GetObject/Async GetObject withConcurrency:1: Warming up for 3.0000 s
+Benchmarking Async GetObject/Async GetObject withConcurrency:1: Collecting 10 samples in estimated 10.612 s (880 iterations)
+Benchmarking Async GetObject/Async GetObject withConcurrency:1: Analyzing
+Async GetObject/Async GetObject withConcurrency:1
+                        time:   [13.838 ms 15.311 ms 16.636 ms]
+                        change: [-12.857% -1.9670% +9.7885%] (p = 0.74 > 0.05)
+                        No change in performance detected.
+Benchmarking Async GetObject/Async GetObject withConcurrency:2
+Benchmarking Async GetObject/Async GetObject withConcurrency:2: Warming up for 3.0000 s
+Benchmarking Async GetObject/Async GetObject withConcurrency:2: Collecting 10 samples in estimated 10.319 s (495 iterations)
+Benchmarking Async GetObject/Async GetObject withConcurrency:2: Analyzing
+Async GetObject/Async GetObject withConcurrency:2
+                        time:   [19.563 ms 22.106 ms 23.916 ms]
+                        change: [-12.619% +2.0658% +20.967%] (p = 0.81 > 0.05)
+                        No change in performance detected.
+Found 1 outliers among 10 measurements (10.00%)
+  1 (10.00%) high mild
+Benchmarking Async GetObject/Async GetObject withConcurrency:3
+Benchmarking Async GetObject/Async GetObject withConcurrency:3: Warming up for 3.0000 s
+Benchmarking Async GetObject/Async GetObject withConcurrency:3: Collecting 10 samples in estimated 10.517 s (165 iterations)
+Benchmarking Async GetObject/Async GetObject withConcurrency:3: Analyzing
+Async GetObject/Async GetObject withConcurrency:3
+                        time:   [52.139 ms 56.370 ms 61.717 ms]
+Found 1 outliers among 10 measurements (10.00%)
+  1 (10.00%) high severe
+Benchmarking Async GetObject/Async GetObject withConcurrency:4
+Benchmarking Async GetObject/Async GetObject withConcurrency:4: Warming up for 3.0000 s
+Benchmarking Async GetObject/Async GetObject withConcurrency:4: Collecting 10 samples in estimated 12.156 s (165 iterations)
+Benchmarking Async GetObject/Async GetObject withConcurrency:4: Analyzing
+Async GetObject/Async GetObject withConcurrency:4
+                        time:   [56.112 ms 60.726 ms 66.532 ms]
+Found 1 outliers among 10 measurements (10.00%)
+  1 (10.00%) high mild
+Benchmarking Async GetObject/Async GetObject withConcurrency:5
+Benchmarking Async GetObject/Async GetObject withConcurrency:5: Warming up for 3.0000 s
+Benchmarking Async GetObject/Async GetObject withConcurrency:5: Collecting 10 samples in estimated 11.483 s (110 iterations)
+Benchmarking Async GetObject/Async GetObject withConcurrency:5: Analyzing
+Async GetObject/Async GetObject withConcurrency:5
+                        time:   [88.660 ms 96.493 ms 104.53 ms]
+Found 1 outliers among 10 measurements (10.00%)
+  1 (10.00%) high severe
+Benchmarking Async GetObject/Async GetObject withConcurrency:6
+Benchmarking Async GetObject/Async GetObject withConcurrency:6: Warming up for 3.0000 s
+Benchmarking Async GetObject/Async GetObject withConcurrency:6: Collecting 10 samples in estimated 17.693 s (110 iterations)
+Benchmarking Async GetObject/Async GetObject withConcurrency:6: Analyzing
+Async GetObject/Async GetObject withConcurrency:6
+                        time:   [124.30 ms 139.97 ms 150.02 ms]
+Benchmarking Async GetObject/Async GetObject withConcurrency:7
+Benchmarking Async GetObject/Async GetObject withConcurrency:7: Warming up for 3.0000 s
+Benchmarking Async GetObject/Async GetObject withConcurrency:7: Collecting 10 samples in estimated 16.716 s (110 iterations)
+Benchmarking Async GetObject/Async GetObject withConcurrency:7: Analyzing
+Async GetObject/Async GetObject withConcurrency:7
+                        time:   [142.95 ms 156.73 ms 172.46 ms]
+Found 2 outliers among 10 measurements (20.00%)
+  1 (10.00%) low mild
+  1 (10.00%) high mild
+Benchmarking Async GetObject/Async GetObject withConcurrency:8
+Benchmarking Async GetObject/Async GetObject withConcurrency:8: Warming up for 3.0000 s
+
+Warning: Unable to complete 10 samples in 10.0s. You may wish to increase target time to 11.2s or enable flat sampling.
+Benchmarking Async GetObject/Async GetObject withConcurrency:8: Collecting 10 samples in estimated 11.217 s (55 iterations)
+Benchmarking Async GetObject/Async GetObject withConcurrency:8: Analyzing
+Async GetObject/Async GetObject withConcurrency:8
+                        time:   [191.72 ms 227.68 ms 258.51 ms]
+Benchmarking Async GetObject/Async GetObject withConcurrency:9
+Benchmarking Async GetObject/Async GetObject withConcurrency:9: Warming up for 3.0000 s
+
+Warning: Unable to complete 10 samples in 10.0s. You may wish to increase target time to 12.1s or enable flat sampling.
+Benchmarking Async GetObject/Async GetObject withConcurrency:9: Collecting 10 samples in estimated 12.061 s (55 iterations)
+Benchmarking Async GetObject/Async GetObject withConcurrency:9: Analyzing
+Async GetObject/Async GetObject withConcurrency:9
+                        time:   [213.07 ms 232.59 ms 266.61 ms]
+Benchmarking Async GetObject/Async GetObject withConcurrency:10
+Benchmarking Async GetObject/Async GetObject withConcurrency:10: Warming up for 3.0000 s
+
+Warning: Unable to complete 10 samples in 10.0s. You may wish to increase target time to 14.5s or enable flat sampling.
+Benchmarking Async GetObject/Async GetObject withConcurrency:10: Collecting 10 samples in estimated 14.530 s (55 iterations)
+Benchmarking Async GetObject/Async GetObject withConcurrency:10: Analyzing
+Async GetObject/Async GetObject withConcurrency:10
+                        time:   [173.49 ms 253.60 ms 335.20 ms]
+Found 1 outliers among 10 measurements (10.00%)
+  1 (10.00%) low mild
+
+Benchmarking Async GetObject/Async PutObject withConcurrency:1
+Benchmarking Async GetObject/Async PutObject withConcurrency:1: Warming up for 3.0000 s
+Benchmarking Async GetObject/Async PutObject withConcurrency:1: Collecting 10 samples in estimated 30.489 s (2805 iterations)
+Benchmarking Async GetObject/Async PutObject withConcurrency:1: Analyzing
+Async GetObject/Async PutObject withConcurrency:1
+                        time:   [10.882 ms 11.966 ms 12.919 ms]
+Found 1 outliers among 10 measurements (10.00%)
+  1 (10.00%) high severe
+Benchmarking Async GetObject/Async PutObject withConcurrency:2
+Benchmarking Async GetObject/Async PutObject withConcurrency:2: Warming up for 3.0000 s
+Benchmarking Async GetObject/Async PutObject withConcurrency:2: Collecting 10 samples in estimated 30.242 s (1320 iterations)
+Benchmarking Async GetObject/Async PutObject withConcurrency:2: Analyzing
+Async GetObject/Async PutObject withConcurrency:2
+                        time:   [18.967 ms 20.413 ms 21.889 ms]
+Benchmarking Async GetObject/Async PutObject withConcurrency:3
+Benchmarking Async GetObject/Async PutObject withConcurrency:3: Warming up for 3.0000 s
+Benchmarking Async GetObject/Async PutObject withConcurrency:3: Collecting 10 samples in estimated 30.518 s (495 iterations)
+Benchmarking Async GetObject/Async PutObject withConcurrency:3: Analyzing
+Async GetObject/Async PutObject withConcurrency:3
+                        time:   [59.709 ms 60.874 ms 62.199 ms]
+Found 1 outliers among 10 measurements (10.00%)
+  1 (10.00%) high mild
+Benchmarking Async GetObject/Async PutObject withConcurrency:4
+Benchmarking Async GetObject/Async PutObject withConcurrency:4: Warming up for 3.0000 s
+Benchmarking Async GetObject/Async PutObject withConcurrency:4: Collecting 10 samples in estimated 30.793 s (440 iterations)
+Benchmarking Async GetObject/Async PutObject withConcurrency:4: Analyzing
+Async GetObject/Async PutObject withConcurrency:4
+                        time:   [61.479 ms 68.421 ms 74.080 ms]
+Found 1 outliers among 10 measurements (10.00%)
+  1 (10.00%) high mild
+Benchmarking Async GetObject/Async PutObject withConcurrency:5
+Benchmarking Async GetObject/Async PutObject withConcurrency:5: Warming up for 3.0000 s
+Benchmarking Async GetObject/Async PutObject withConcurrency:5: Collecting 10 samples in estimated 34.414 s (330 iterations)
+Benchmarking Async GetObject/Async PutObject withConcurrency:5: Analyzing
+Async GetObject/Async PutObject withConcurrency:5
+                        time:   [102.24 ms 110.02 ms 118.69 ms]
+Found 1 outliers among 10 measurements (10.00%)
+  1 (10.00%) high mild
+Benchmarking Async GetObject/Async PutObject withConcurrency:6
+Benchmarking Async GetObject/Async PutObject withConcurrency:6: Warming up for 3.0000 s
+Benchmarking Async GetObject/Async PutObject withConcurrency:6: Collecting 10 samples in estimated 36.246 s (275 iterations)
+Benchmarking Async GetObject/Async PutObject withConcurrency:6: Analyzing
+Async GetObject/Async PutObject withConcurrency:6
+                        time:   [119.42 ms 129.18 ms 136.72 ms]
+Benchmarking Async GetObject/Async PutObject withConcurrency:7
+Benchmarking Async GetObject/Async PutObject withConcurrency:7: Warming up for 3.0000 s
+Benchmarking Async GetObject/Async PutObject withConcurrency:7: Collecting 10 samples in estimated 30.338 s (165 iterations)
+Benchmarking Async GetObject/Async PutObject withConcurrency:7: Analyzing
+Async GetObject/Async PutObject withConcurrency:7
+                        time:   [137.72 ms 151.60 ms 173.47 ms]
+Found 1 outliers among 10 measurements (10.00%)
+  1 (10.00%) high mild
+Benchmarking Async GetObject/Async PutObject withConcurrency:8
+Benchmarking Async GetObject/Async PutObject withConcurrency:8: Warming up for 3.0000 s
+Benchmarking Async GetObject/Async PutObject withConcurrency:8: Collecting 10 samples in estimated 36.189 s (220 iterations)
+Benchmarking Async GetObject/Async PutObject withConcurrency:8: Analyzing
+Async GetObject/Async PutObject withConcurrency:8
+                        time:   [223.23 ms 236.66 ms 246.04 ms]
+Benchmarking Async GetObject/Async PutObject withConcurrency:9
+Benchmarking Async GetObject/Async PutObject withConcurrency:9: Warming up for 3.0000 s
+Benchmarking Async GetObject/Async PutObject withConcurrency:9: Collecting 10 samples in estimated 36.577 s (165 iterations)
+Benchmarking Async GetObject/Async PutObject withConcurrency:9: Analyzing
+Async GetObject/Async PutObject withConcurrency:9
+                        time:   [207.43 ms 236.00 ms 263.88 ms]
+Benchmarking Async GetObject/Async PutObject withConcurrency:10
+Benchmarking Async GetObject/Async PutObject withConcurrency:10: Warming up for 3.0000 s
+Benchmarking Async GetObject/Async PutObject withConcurrency:10: Collecting 10 samples in estimated 30.340 s (110 iterations)
+Benchmarking Async GetObject/Async PutObject withConcurrency:10: Analyzing
+Async GetObject/Async PutObject withConcurrency:10
+                        time:   [263.06 ms 290.62 ms 310.91 ms]
+
