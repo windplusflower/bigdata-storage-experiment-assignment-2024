@@ -1,7 +1,0 @@
-[
-{
-  "directory": "/root/cuckoo/build",
-  "command": "/usr/bin/g++   -g -o CMakeFiles/cuckoo.dir/main.cpp.o -c /root/cuckoo/main.cpp",
-  "file": "/root/cuckoo/main.cpp"
-}
-]
