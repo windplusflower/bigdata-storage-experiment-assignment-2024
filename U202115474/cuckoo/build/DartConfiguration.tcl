@@ -4,8 +4,8 @@
 
 
 # Configuration directories and files
-SourceDirectory: /root/cuckoo
-BuildDirectory: /root/cuckoo/build
+SourceDirectory: /root/bigdata-storage-experiment-assignment-2024/U202115474/cuckoo
+BuildDirectory: /root/bigdata-storage-experiment-assignment-2024/U202115474/cuckoo/build
 
 # Where to place the cost data store
 CostDataFile: 
@@ -14,7 +14,7 @@ CostDataFile:
 Site: iZbp1hf0ex12aff1lmsq0kZ
 
 # Build name is osname-revision-compiler, i.e. Linux-2.4.2-2smp-c++
-BuildName: Linux-g++
+BuildName: Linux-c++
 
 # Subprojects
 LabelsForSubprojects: 
@@ -26,7 +26,7 @@ SubmitURL: http://
 NightlyStartTime: 00:00:00 EDT
 
 # Commands for the build/test/submit cycle
-ConfigureCommand: "/usr/bin/cmake" "/root/cuckoo"
+ConfigureCommand: "/usr/bin/cmake" "/root/bigdata-storage-experiment-assignment-2024/U202115474/cuckoo"
 MakeCommand: /usr/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}" -- -i
 DefaultCTestConfigurationType: Release
 
@@ -62,7 +62,7 @@ UpdateOptions:
 UpdateType: 
 
 # Compiler info
-Compiler: /usr/bin/g++
+Compiler: /usr/bin/c++
 CompilerVersion: 11.4.0
 
 # Dynamic analysis (MemCheck)

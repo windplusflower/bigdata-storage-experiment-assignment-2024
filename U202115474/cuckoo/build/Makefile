@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/cuckoo
+CMAKE_SOURCE_DIR = /root/bigdata-storage-experiment-assignment-2024/U202115474/cuckoo
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/cuckoo/build
+CMAKE_BINARY_DIR = /root/bigdata-storage-experiment-assignment-2024/U202115474/cuckoo/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -78,7 +78,7 @@ package/fast: package
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	/usr/bin/cpack --config ./CPackSourceConfig.cmake /root/cuckoo/build/CPackSourceConfig.cmake
+	/usr/bin/cpack --config ./CPackSourceConfig.cmake /root/bigdata-storage-experiment-assignment-2024/U202115474/cuckoo/build/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -117,9 +117,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/cuckoo/build/CMakeFiles /root/cuckoo/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/bigdata-storage-experiment-assignment-2024/U202115474/cuckoo/build/CMakeFiles /root/bigdata-storage-experiment-assignment-2024/U202115474/cuckoo/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/cuckoo/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/bigdata-storage-experiment-assignment-2024/U202115474/cuckoo/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -523,29 +523,29 @@ cuckoo/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cuckoo.dir/build.make CMakeFiles/cuckoo.dir/build
 .PHONY : cuckoo/fast
 
-main.o: main.cpp.o
-.PHONY : main.o
+test.o: test.cpp.o
+.PHONY : test.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cuckoo.dir/build.make CMakeFiles/cuckoo.dir/main.cpp.o
-.PHONY : main.cpp.o
+test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cuckoo.dir/build.make CMakeFiles/cuckoo.dir/test.cpp.o
+.PHONY : test.cpp.o
 
-main.i: main.cpp.i
-.PHONY : main.i
+test.i: test.cpp.i
+.PHONY : test.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cuckoo.dir/build.make CMakeFiles/cuckoo.dir/main.cpp.i
-.PHONY : main.cpp.i
+test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cuckoo.dir/build.make CMakeFiles/cuckoo.dir/test.cpp.i
+.PHONY : test.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+test.s: test.cpp.s
+.PHONY : test.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cuckoo.dir/build.make CMakeFiles/cuckoo.dir/main.cpp.s
-.PHONY : main.cpp.s
+test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cuckoo.dir/build.make CMakeFiles/cuckoo.dir/test.cpp.s
+.PHONY : test.cpp.s
 
 # Help Target
 help:
@@ -587,9 +587,9 @@ help:
 	@echo "... NightlyTest"
 	@echo "... NightlyUpdate"
 	@echo "... cuckoo"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... test.o"
+	@echo "... test.i"
+	@echo "... test.s"
 .PHONY : help
 
 

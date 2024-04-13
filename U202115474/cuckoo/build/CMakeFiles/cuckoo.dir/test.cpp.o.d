@@ -1,5 +1,5 @@
-CMakeFiles/cuckoo.dir/main.cpp.o: \
- /root/bigdata-storage-experiment-assignment-2024/U202115474/cuckoo/main.cpp \
+CMakeFiles/cuckoo.dir/test.cpp.o: \
+ /root/bigdata-storage-experiment-assignment-2024/U202115474/cuckoo/test.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/11/ctime \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \

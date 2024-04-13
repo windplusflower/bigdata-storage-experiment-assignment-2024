@@ -163,8 +163,8 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "/root/cuckoo/build",
-		"source" : "/root/cuckoo"
+		"build" : "/root/bigdata-storage-experiment-assignment-2024/U202115474/cuckoo/build",
+		"source" : "/root/bigdata-storage-experiment-assignment-2024/U202115474/cuckoo"
 	},
 	"version" : 
 	{

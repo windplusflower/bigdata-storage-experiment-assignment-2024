@@ -1,1 +1,1 @@
-/usr/bin/g++ -g -rdynamic CMakeFiles/cuckoo.dir/main.cpp.o -o cuckoo 
+/usr/bin/c++ -rdynamic CMakeFiles/cuckoo.dir/test.cpp.o -o cuckoo 

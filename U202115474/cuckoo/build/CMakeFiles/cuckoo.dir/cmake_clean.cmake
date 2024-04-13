@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/cuckoo.dir/main.cpp.o"
-  "CMakeFiles/cuckoo.dir/main.cpp.o.d"
+  "CMakeFiles/cuckoo.dir/test.cpp.o"
+  "CMakeFiles/cuckoo.dir/test.cpp.o.d"
   "cuckoo"
   "cuckoo.pdb"
 )

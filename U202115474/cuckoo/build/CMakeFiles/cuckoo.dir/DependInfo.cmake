@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/root/cuckoo/main.cpp" "CMakeFiles/cuckoo.dir/main.cpp.o" "gcc" "CMakeFiles/cuckoo.dir/main.cpp.o.d"
+  "/root/bigdata-storage-experiment-assignment-2024/U202115474/cuckoo/test.cpp" "CMakeFiles/cuckoo.dir/test.cpp.o" "gcc" "CMakeFiles/cuckoo.dir/test.cpp.o.d"
   )
 
 # Targets to which this target links.

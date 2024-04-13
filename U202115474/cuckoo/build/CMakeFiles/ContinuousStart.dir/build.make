@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/cuckoo
+CMAKE_SOURCE_DIR = /root/bigdata-storage-experiment-assignment-2024/U202115474/cuckoo
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/cuckoo/build
+CMAKE_BINARY_DIR = /root/bigdata-storage-experiment-assignment-2024/U202115474/cuckoo/build
 
 # Utility rule file for ContinuousStart.
 
@@ -82,6 +82,6 @@ CMakeFiles/ContinuousStart.dir/clean:
 .PHONY : CMakeFiles/ContinuousStart.dir/clean
 
 CMakeFiles/ContinuousStart.dir/depend:
-	cd /root/cuckoo/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/cuckoo /root/cuckoo /root/cuckoo/build /root/cuckoo/build /root/cuckoo/build/CMakeFiles/ContinuousStart.dir/DependInfo.cmake --color=$(COLOR)
+	cd /root/bigdata-storage-experiment-assignment-2024/U202115474/cuckoo/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /root/bigdata-storage-experiment-assignment-2024/U202115474/cuckoo /root/bigdata-storage-experiment-assignment-2024/U202115474/cuckoo /root/bigdata-storage-experiment-assignment-2024/U202115474/cuckoo/build /root/bigdata-storage-experiment-assignment-2024/U202115474/cuckoo/build /root/bigdata-storage-experiment-assignment-2024/U202115474/cuckoo/build/CMakeFiles/ContinuousStart.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ContinuousStart.dir/depend
 
