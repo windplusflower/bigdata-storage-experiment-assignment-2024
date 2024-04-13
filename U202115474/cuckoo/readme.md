@@ -35,8 +35,8 @@ int main() {
     //也可以用迭代器
     for (auto it = f.begin(); it != f.end(); it++)
         printf("(%d,%d) \n", it->first, it->second);
-    //调整动态扩容的阈值（元素数量除以地址数量），默认是1
-    f.change_limits(1.0);
+    //调整动态扩容的阈值（元素数量除以总容量），默认是0.1
+    f.change_limits(0.1);
     //调整每个桶最多可容纳的元素数量,默认是16
     f.change_num_limits(2);
     //清空
