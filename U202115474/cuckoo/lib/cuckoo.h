@@ -261,7 +261,7 @@ public:
             //弹出元素是从桶头弹，因此选中的不是同一个元素，与另选一个桶没有区别。
             num--;
             conflicts++;
-            if (time(0) % 2) {
+            if (rand() % 2) {
                 auto temp = a[posa].front();
                 a[posa].pop_front();
                 a[posa].emplace_back(key, value);
