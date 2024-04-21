@@ -27,7 +27,7 @@ class CuckooMap {
     int num_per_bucket;
     // a和b两个链表数组
     std::vector<std::list<std::pair<T, P>>> a, b;
-    //两个基准哈希函数,用于生成实际调用的哈希函数
+    //基准哈希函数,用于生成实际调用的哈希函数
     std::function<int(T)> Hash;
     //两个面具，用于rehash
     int maska, maskb;
@@ -136,7 +136,7 @@ public:
     //默认构造
     CuckooMap<T, P>() :
         size_pos(0), _size(sizes[0]), num(0), num_limits(0.1),
-        num_per_bucket(16), debug(false), conflicts(0), maska(0), maskb(0),
+        num_per_bucket(16), debug(false), conflicts(0), maska(std::hash<int>()(rand())), maskb(std::hash<int>()(rand())),
         rehashs(0) {
         Hash_Generator<T> *hash_generator = new Hash_Generator<T>();
         Hash = hash_generator->alloc();
@@ -147,7 +147,7 @@ public:
     //指定哈希函数进行构造
     CuckooMap<T, P>(std::function<int(T)> _hash) :
         size_pos(0), _size(sizes[0]), Hash(_hash), num(0), num_limits(0.1),
-        num_per_bucket(16), debug(false), conflicts(0), maska(0), maskb(0),
+        num_per_bucket(16), debug(false), conflicts(0), maska(std::hash<int>()(rand())), maskb(std::hash<int>()(rand())),
         rehashs(0) {
         a.resize(_size);
         b.resize(_size);
